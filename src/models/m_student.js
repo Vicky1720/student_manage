@@ -3,10 +3,12 @@ const mongoose = require("mongoose");
 const studentSchema = new mongoose.Schema({
   enrollement_number: {
     type: Number,
+    required: true,
   },
 
   student_name: {
     type: String,
+    required: true,
   },
 
   contact_no: {
@@ -23,6 +25,7 @@ const studentSchema = new mongoose.Schema({
 
   email_id: {
     type: String,
+    required: true,
   },
 });
 
