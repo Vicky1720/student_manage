@@ -6,7 +6,7 @@ const resultSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  e_student_id: {
+  student_id: {
     // type: mongoose.Schema.Types.ObjectId,
     type: String,
     required: true,
@@ -16,6 +16,7 @@ const resultSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  
   obtain_marks: {
     type: Number,
   },

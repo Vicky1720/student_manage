@@ -3,8 +3,10 @@ const subject = require("../models/m_subject");
 const getSubject = async (req, res) => {
   try {
     const sub_data = await subject.find();
+    logger.Loggers.info("succssfully got list of subject");
     return res.status(200).json(sub_data);
   } catch (error) {
+    logger.Loggers.error("error finding for subject");
     res.status(500).json({ message: error.message });
   }
 };
@@ -12,8 +14,10 @@ const getSubject = async (req, res) => {
 const getSubjectById = async (req, res) => {
   try {
     const sub_data = await subject.findById(req.params.id);
+    logger.Loggers.info("succssfully got list of subject");
     res.status(200).json(sub_data);
   } catch (error) {
+    logger.Loggers.error("error finding for subject");
     res.status(500).json({ message: error.message });
   }
 };

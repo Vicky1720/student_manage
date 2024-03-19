@@ -3,8 +3,10 @@ const exam = require("../models/m_exam");
 const getExam = async (req, res) => {
   try {
     const exam_data = await exam.find();
+    logger.Loggers.info("succssfully got list of exam");
     return res.status(200).json(exam_data);
   } catch (error) {
+    logger.Loggers.error("error finding for exam");
     res.status(500).json({ message: error.message });
   }
 };
@@ -12,8 +14,10 @@ const getExam = async (req, res) => {
 const getExamById = async (req, res) => {
   try {
     const exam_data = await student.findById(req.params.id);
+    logger.Loggers.info("succssfully got list of exam");
     res.status(200).json(exam_data);
   } catch (error) {
+    logger.Loggers.error("error finding for exam");
     res.status(500).json({ message: error.message });
   }
 };

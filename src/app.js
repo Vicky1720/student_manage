@@ -16,7 +16,7 @@ app.use(cors());
 // Rate limiting middleware
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 10, // limit each IP to 100 requests per windowMs
+  max: 10, // limit each IP to 10 requests per windowMs
   message: "Too many requests from this IP, please try again later.",
 });
 app.use(limiter);
@@ -26,14 +26,6 @@ const accountLimiter = rateLimit({
   windowMs: 60 * 60 * 1000, // 1 hour
   max: 5, // limit each account to 5 requests per windowMs
   message: "Too many requests from this account, please try again later.",
-});
-
-app.get("/", async (req, res) => {
-  try {
-    return res.status(200).json({ message: "Server Is Running" });
-  } catch (error) {
-    return res.status(200).json({ errorMessage: "Server is crashed" });
-  }
 });
 
 // Apply account limiting middleware to specific routes

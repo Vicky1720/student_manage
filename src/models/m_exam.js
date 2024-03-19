@@ -6,6 +6,12 @@ const examSchema = new mongoose.Schema({
     required: true,
   },
 
+  student_id: {
+    // type: mongoose.Schema.Types.ObjectId,
+    type: String,
+    required: true,
+  },
+
   subject_id: {
     // type: mongoose.Schema.Types.ObjectId,
     type: String,

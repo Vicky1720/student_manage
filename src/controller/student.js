@@ -4,10 +4,10 @@ const logger = require("../controller/logger");
 const getStudent = async (req, res) => {
   try {
     const s_data = await student.find();
-    logger.studentLogger.log("info", "succssfully got list of student");
+    logger.Loggers.info("succssfully got list of student");
     return res.status(200).json(s_data);
   } catch (error) {
-    logger.studentLogger.log("error", "error finding student");
+    logger.Loggers.error("error finding for student");
     res.status(500).json({ message: error.message });
   }
 };
@@ -15,8 +15,10 @@ const getStudent = async (req, res) => {
 const getStudentById = async (req, res) => {
   try {
     const s_data = await student.findById(req.params.id);
+    logger.Loggers.info("succssfully got list of student");
     res.status(200).json(s_data);
   } catch (error) {
+    logger.Loggers.error("error finding for student");
     res.status(500).json({ message: error.message });
   }
 };

@@ -3,8 +3,10 @@ const result = require("../models/m_result");
 const getResult = async (req, res) => {
   try {
     const result_data = await result.find();
+    logger.Loggers.info("succssfully got list of result");
     return res.status(200).json(result_data);
   } catch (error) {
+    logger.Loggers.error("error finding for result");
     res.status(500).json({ message: error.message });
   }
 };
@@ -12,8 +14,10 @@ const getResult = async (req, res) => {
 const getResultById = async (req, res) => {
   try {
     const result_data = await result.findById(req.params.id);
+    logger.Loggers.info("succssfully got list of result");
     res.status(200).json(result_data);
   } catch (error) {
+    logger.Loggers.error("error finding for result");
     res.status(500).json({ message: error.message });
   }
 };

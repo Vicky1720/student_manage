@@ -1,16 +1,15 @@
-
-
 const { createLogger, transports, format } = require("winston");
 
 // ---- logging function
 
-const studentLogger = createLogger({
+const Loggers = createLogger({
   transports: [
     new transports.File({
       filename: "student.log",
       level: "info",
       format: format.combine(format.timestamp(), format.json()),
     }),
+
     new transports.File({
       filename: "student-error.log",
       level: "error",
@@ -19,4 +18,4 @@ const studentLogger = createLogger({
   ],
 });
 
-module.exports = { studentLogger };
+module.exports = { Loggers };
