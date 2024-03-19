@@ -6,7 +6,7 @@ const resultSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  student_id: {
+  e_student_id: {
     // type: mongoose.Schema.Types.ObjectId,
     type: String,
     required: true,

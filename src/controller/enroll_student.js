@@ -1,10 +1,13 @@
 const e_Student = require("../models/m_enroll_student");
+const logger = require("../controller/logger");
 
 const getEnroll_Student = async (req, res) => {
   try {
     const es_data = await e_Student.find();
+    logger.studentLogger.log("info", "succssfully got list of e_student");
     return res.status(200).json(es_data);
   } catch (error) {
+    logger.studentLogger.log("error", "error finding e_student");
     res.status(500).json({ message: error.message });
   }
 };

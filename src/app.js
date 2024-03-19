@@ -3,6 +3,7 @@ const cors = require("cors");
 const helmet = require("helmet");
 const dotenv = require("dotenv");
 const path = require("path");
+const rateLimit = require("express-rate-limit");
 require("../src/helpers/db");
 dotenv.config();
 
@@ -12,6 +13,21 @@ app.use(helmet({ crossOriginResourcePolicy: { policy: "same-site" } }));
 app.use(express.json());
 app.use(cors());
 
+// Rate limiting middleware
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 10, // limit each IP to 100 requests per windowMs
+  message: "Too many requests from this IP, please try again later.",
+});
+app.use(limiter);
+
+// Account limiting middleware
+const accountLimiter = rateLimit({
+  windowMs: 60 * 60 * 1000, // 1 hour
+  max: 5, // limit each account to 5 requests per windowMs
+  message: "Too many requests from this account, please try again later.",
+});
+
 app.get("/", async (req, res) => {
   try {
     return res.status(200).json({ message: "Server Is Running" });
@@ -19,6 +35,9 @@ app.get("/", async (req, res) => {
     return res.status(200).json({ errorMessage: "Server is crashed" });
   }
 });
+
+// Apply account limiting middleware to specific routes
+app.use("/account-limited-route", accountLimiter);
 
 app.use(require("../src/routers/index"));
 

@@ -1,10 +1,13 @@
 const student = require("../models/m_student");
+const logger = require("../controller/logger");
 
 const getStudent = async (req, res) => {
   try {
     const s_data = await student.find();
+    logger.studentLogger.log("info", "succssfully got list of student");
     return res.status(200).json(s_data);
   } catch (error) {
+    logger.studentLogger.log("error", "error finding student");
     res.status(500).json({ message: error.message });
   }
 };
