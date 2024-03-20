@@ -73,3 +73,63 @@
 {"level":"info","message":"succssfully got list of exam","timestamp":"2024-03-20T11:54:33.265Z"}
 {"level":"info","message":"successfully got list of enroll student","timestamp":"2024-03-20T11:54:47.107Z"}
 {"level":"info","message":"succssfully got list of enroll student","timestamp":"2024-03-20T11:54:50.311Z"}
+{"level":"error","message":"error finding for student","timestamp":"2024-03-20T13:17:42.061Z"}
+{"level":"info","message":"succssfully got list of student","timestamp":"2024-03-20T13:18:09.593Z"}
+{"level":"info","message":"succssfully got list of student","timestamp":"2024-03-20T13:20:43.150Z"}
+{"level":"info","message":"succssfully got list of student","timestamp":"2024-03-20T13:21:03.609Z"}
+{"level":"info","message":"succssfully got list of student","timestamp":"2024-03-20T13:21:57.487Z"}
+{"level":"info","message":"succssfully got list of subject","timestamp":"2024-03-20T13:22:30.137Z"}
+{"level":"info","message":"succssfully got list of subject","timestamp":"2024-03-20T13:23:00.422Z"}
+{"level":"info","message":"succssfully got list of subject","timestamp":"2024-03-20T13:23:13.002Z"}
+{"level":"info","message":"succssfully got list of subject","timestamp":"2024-03-20T13:23:21.427Z"}
+{"level":"info","message":"succssfully got list of subject","timestamp":"2024-03-20T13:23:34.062Z"}
+{"level":"info","message":"succssfully got list of subject","timestamp":"2024-03-20T13:23:41.994Z"}
+{"level":"info","message":"succssfully got list of subject","timestamp":"2024-03-20T13:23:54.185Z"}
+{"level":"info","message":"successfully got list of enroll student","timestamp":"2024-03-20T13:24:40.303Z"}
+{"level":"info","message":"successfully got list of enroll student","timestamp":"2024-03-20T13:26:34.965Z"}
+{"level":"info","message":"successfully got list of enroll student","timestamp":"2024-03-20T13:26:53.143Z"}
+{"level":"info","message":"succssfully got list of student","timestamp":"2024-03-20T13:30:39.844Z"}
+{"level":"info","message":"succssfully got list of student","timestamp":"2024-03-20T13:32:14.364Z"}
+{"level":"info","message":"succssfully got list of student","timestamp":"2024-03-20T13:32:40.499Z"}
+{"level":"info","message":"succssfully got list of student","timestamp":"2024-03-20T13:33:57.682Z"}
+{"level":"info","message":"succssfully got list of student","timestamp":"2024-03-20T13:34:47.512Z"}
+{"level":"info","message":"succssfully got list of student","timestamp":"2024-03-20T13:35:44.766Z"}
+{"level":"info","message":"succssfully got list of student","timestamp":"2024-03-20T13:36:14.407Z"}
+{"level":"info","message":"succssfully got list of student","timestamp":"2024-03-20T13:36:33.354Z"}
+{"level":"info","message":"succssfully got list of student","timestamp":"2024-03-20T13:37:55.073Z"}
+{"level":"info","message":"succssfully got list of student","timestamp":"2024-03-20T13:38:17.338Z"}
+{"level":"info","message":"succssfully got list of subject","timestamp":"2024-03-20T13:39:54.330Z"}
+{"level":"info","message":"succssfully got list of subject","timestamp":"2024-03-20T13:40:35.260Z"}
+{"level":"info","message":"succssfully got list of subject","timestamp":"2024-03-20T13:41:41.301Z"}
+{"level":"info","message":"succssfully got list of subject","timestamp":"2024-03-20T13:44:44.905Z"}
+{"level":"info","message":"succssfully got list of subject","timestamp":"2024-03-20T13:44:52.620Z"}
+{"level":"info","message":"succssfully got list of subject","timestamp":"2024-03-20T13:45:16.187Z"}
+{"level":"info","message":"succssfully got list of subject","timestamp":"2024-03-20T13:45:20.677Z"}
+{"level":"info","message":"successfully got list of enroll student","timestamp":"2024-03-20T13:46:58.703Z"}
+{"level":"info","message":"successfully got list of enroll student","timestamp":"2024-03-20T13:47:29.314Z"}
+{"level":"info","message":"succssfully got list of enroll student","timestamp":"2024-03-20T13:47:43.988Z"}
+{"level":"info","message":"succssfully got list of enroll student","timestamp":"2024-03-20T13:48:06.654Z"}
+{"level":"info","message":"successfully got list of enroll student","timestamp":"2024-03-20T13:48:30.365Z"}
+{"level":"info","message":"successfully got list of enroll student","timestamp":"2024-03-20T13:50:45.522Z"}
+{"level":"info","message":"succssfully got list of enroll student","timestamp":"2024-03-20T13:51:05.186Z"}
+{"level":"info","message":"successfully got list of exams","timestamp":"2024-03-20T13:54:05.022Z"}
+{"level":"info","message":"successfully got list of exams","timestamp":"2024-03-20T13:54:24.866Z"}
+{"level":"info","message":"successfully got list of exams","timestamp":"2024-03-20T13:56:54.946Z"}
+{"level":"info","message":"succssfully got list of exam","timestamp":"2024-03-20T13:57:43.562Z"}
+{"level":"info","message":"succssfully got list of exam","timestamp":"2024-03-20T13:57:48.747Z"}
+{"level":"info","message":"succssfully got list of exam","timestamp":"2024-03-20T13:58:04.537Z"}
+{"level":"info","message":"successfully got list of exams","timestamp":"2024-03-20T13:58:43.468Z"}
+{"level":"info","message":"succssfully got list of exam","timestamp":"2024-03-20T13:59:08.482Z"}
+{"level":"info","message":"succssfully got list of exam","timestamp":"2024-03-20T14:01:46.675Z"}
+{"level":"info","message":"succssfully got list of exam","timestamp":"2024-03-20T14:01:54.854Z"}
+{"level":"info","message":"Successfully got list of result","timestamp":"2024-03-20T14:04:52.046Z"}
+{"level":"info","message":"Successfully got list of result","timestamp":"2024-03-20T14:05:50.501Z"}
+{"level":"info","message":"Successfully got list of result","timestamp":"2024-03-20T14:06:12.228Z"}
+{"level":"info","message":"succssfully got list of result","timestamp":"2024-03-20T14:06:40.736Z"}
+{"level":"info","message":"succssfully got list of result","timestamp":"2024-03-20T14:07:56.168Z"}
+{"level":"info","message":"succssfully got list of student","timestamp":"2024-03-20T17:46:07.500Z"}
+{"level":"info","message":"succssfully got list of student","timestamp":"2024-03-20T17:54:17.924Z"}
+{"level":"info","message":"succssfully got list of student","timestamp":"2024-03-20T17:55:13.004Z"}
+{"level":"info","message":"succssfully got list of student","timestamp":"2024-03-20T17:55:58.010Z"}
+{"level":"info","message":"Successfully got list of result","timestamp":"2024-03-20T17:59:20.104Z"}
+{"level":"info","message":"succssfully got list of student","timestamp":"2024-03-20T18:00:35.440Z"}
