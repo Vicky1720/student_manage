@@ -33,7 +33,7 @@ const accountLimiter = rateLimit({
 // Apply account limiting middleware to specific routes
 app.use("/account-limited-route", accountLimiter);
 
-app.use("/login", require("./routers/r_studentLogin"));
+app.use("/login", require("./routers/r_Login"));
 
 // app.use(require("../src/routers/index"));
 
