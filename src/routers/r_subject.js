@@ -1,5 +1,5 @@
 const express = require("express");
-const { body } = require("express-validator");
+const { body, validationResult } = require("express-validator");
 
 const {
   getSubject,
@@ -12,19 +12,21 @@ const {
 const Subject = express.Router();
 const isValidate = [
   body("subject_name").notEmpty().withMessage("Please Enter The Subject Name"),
-  body("student_id").notEmpty().withMessage("Please Enter The Student Id"),
 ];
 
-Subject.get("/", getSubject);
-Subject.get("/:id", getSubjectById);
-Subject.post("/", isValidate, (req, res) => {
+// Validation middleware for POST and PUT requests
+function validate(req, res, next) {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
     return res.status(400).json({ errors: errors.array() });
   }
-  insertSubject(req, res);
-});
-Subject.put("/:id", updateSubject);
+  next();
+}
+
+Subject.get("/", getSubject);
+Subject.get("/:id", getSubjectById);
+Subject.post("/", isValidate, validate, insertSubject);
+Subject.put("/:id", isValidate, validate, updateSubject);
 Subject.delete("/:id", deleteSubject);
 
 module.exports = Subject;

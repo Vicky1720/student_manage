@@ -2,21 +2,10 @@ const mongoose = require("mongoose");
 
 const resultSchema = new mongoose.Schema({
   exam_id: {
-    // type: mongoose.Schema.Types.ObjectId,
-    type: String,
+    type: mongoose.Schema.Types.ObjectId,
     required: true,
   },
-  student_id: {
-    // type: mongoose.Schema.Types.ObjectId,
-    type: String,
-    required: true,
-  },
-  subject_id: {
-    // type: mongoose.Schema.Types.ObjectId,
-    type: String,
-    required: true,
-  },
-  
+
   obtain_marks: {
     type: Number,
   },

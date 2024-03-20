@@ -2,14 +2,12 @@ const mongoose = require("mongoose");
 
 const e_StudentSchema = new mongoose.Schema({
   student_id: {
-    // type: mongoose.Schema.Types.ObjectId,
-    type: String,
+    type: mongoose.Schema.Types.ObjectId,
     required: true,
   },
-  
+
   subject_id: {
-    // type: mongoose.Schema.Types.ObjectId,
-    type: String,
+    type: mongoose.Schema.Types.ObjectId,
     required: true,
   },
 });

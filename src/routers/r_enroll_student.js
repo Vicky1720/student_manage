@@ -1,5 +1,5 @@
 const express = require("express");
-const { body } = require("express-validator");
+const { body, validationResult } = require("express-validator");
 
 const {
   getEnroll_Student,
@@ -17,14 +17,19 @@ const isValidate = [
 
 e_student.get("/", getEnroll_Student);
 e_student.get("/:id", getEnroll_StudentById);
-e_student.post("/", isValidate, (req, res) => {
+
+// Validation middleware for POST and PUT requests
+function validate(req, res, next) {
   const errors = validationResult(req);
   if (!errors.isEmpty()) {
     return res.status(400).json({ errors: errors.array() });
   }
-  insertEnroll_Student(req, res);
-});
-e_student.put("/:id", updateEnroll_Student);
+  next();
+}
+
+e_student.post("/", isValidate, validate, insertEnroll_Student);
+e_student.put("/:id", isValidate, validate, updateEnroll_Student);
+
 e_student.delete("/:id", deleteEnroll_Student);
 
 module.exports = e_student;

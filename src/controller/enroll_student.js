@@ -1,10 +1,44 @@
 const e_Student = require("../models/m_enroll_student");
 const logger = require("../controller/logger");
+const { ObjectId } = require("mongodb");
 
 const getEnroll_Student = async (req, res) => {
   try {
-    const es_data = await e_Student.find();
-   logger.Loggers.info("succssfully got list of enroll student");
+    const es_data = await e_Student.aggregate([
+      {
+        $lookup: {
+          from: "students",
+          localField: "student_id",
+          foreignField: "_id",
+          as: "student_info",
+        },
+      },
+      {
+        $lookup: {
+          from: "subjects",
+          localField: "subject_id",
+          foreignField: "_id",
+          as: "subject_info",
+        },
+      },
+      {
+        $unwind: "$student_info",
+      },
+      {
+        $unwind: "$subject_info",
+      },
+      {
+        $project: {
+          _id: 0,
+          student_name: "$student_info.student_name",
+          enrollement_number: "$student_info.enrollement_number",
+          email_id: "$student_info.email_id",
+          subject_name: "$subject_info.subject_name",
+        },
+      },
+    ]);
+
+    logger.Loggers.info("successfully got list of enroll student");
     return res.status(200).json(es_data);
   } catch (error) {
     logger.Loggers.error("error finding for enroll student");
@@ -14,9 +48,48 @@ const getEnroll_Student = async (req, res) => {
 
 const getEnroll_StudentById = async (req, res) => {
   try {
-    const es_data = await e_Student.findById(req.params.id);
+    const Id = req?.params?.id;
+    const es_data = await e_Student.aggregate([
+      {
+        $match: {
+          _id: new ObjectId(Id),
+        },
+      },
+      {
+        $lookup: {
+          from: "students",
+          localField: "student_id",
+          foreignField: "_id",
+          as: "student_info",
+        },
+      },
+      {
+        $lookup: {
+          from: "subjects",
+          localField: "subject_id",
+          foreignField: "_id",
+          as: "subject_info",
+        },
+      },
+      {
+        $unwind: "$student_info",
+      },
+      {
+        $unwind: "$subject_info",
+      },
+      {
+        $project: {
+          _id: 0,
+          student_name: "$student_info.student_name",
+          enrollement_number: "$student_info.enrollement_number",
+          email_id: "$student_info.email_id",
+          subject_name: "$subject_info.subject_name",
+        },
+      },
+    ]);
+
     logger.Loggers.info("succssfully got list of enroll student");
-    res.status(200).json(es_data);
+    res.status(200).json(es_data[0]);
   } catch (error) {
     logger.Loggers.error("error finding for enroll student");
     res.status(500).json({ message: error.message });

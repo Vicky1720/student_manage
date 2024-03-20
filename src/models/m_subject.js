@@ -5,11 +5,6 @@ const subjectSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  student_id: {
-    // type: mongoose.Schema.Types.ObjectId,
-    type: String,
-    required: true,
-  },
 });
 
 const subject = new mongoose.model("subject", subjectSchema);
